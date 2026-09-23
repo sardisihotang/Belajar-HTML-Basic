@@ -1,0 +1,42 @@
+h1 {
+    font-family:Georgia;
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center; /* center= text berada di tengah*/
+    color: brown;
+    text-shadow: 10px 5px 10px black;
+    word-spacing: 0.5em;
+    letter-spacing: 5px;
+}
+
+.credit{
+    font-family: Verdana;
+    font-size:11px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none; /*menghilangakan garis bawah*/
+    text-transform: capitalize; /* Setelah Spasi huruf depannya capital semua */
+    text-align: center;
+}
+
+.tautan{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    text-decoration: underline; /* menambahkan garis bawah*/
+    text-transform: lowercase;
+    text-transform: capitalize;
+}
+a.tautan:hover{
+    color: cyan;
+}
+a.tautan:active{
+    color: rgb(212, 255, 0);
+}
+a.tautan:visited{
+    color: darkgreen;
+}
+p.intro{
+    font-family: 'Segoe UI';
+    font-size: 1.2em;
+    text-align: justify;
+}

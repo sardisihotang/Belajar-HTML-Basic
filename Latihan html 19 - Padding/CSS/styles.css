@@ -1,0 +1,47 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* PADDING */
+h1 {
+    width: 160px;
+    height: 50px;
+    text-align: center;
+}
+.border{
+    border: 1px solid;
+}
+.padding-1 {
+    background-color: aquamarine;
+    padding: 5px 20px 50px;
+         /*atas,kiri&kanan,bawah*/
+}
+.padding-2 {
+    background-color: chartreuse;
+    padding: 5px 10px 20px 50px;
+          /*atas,kanan,bawah,kiri*/
+}
+
+/* MARGIN */
+.dekor {
+    width: fit-content;
+    height: fit-content;
+    border: 5px solid;
+    padding: 20px;
+}
+.margin-1 {
+    margin: 5px; /* semua sisi*/
+}
+.margin-2 {
+    margin: 10px auto;
+}
+.margin-3 {
+    margin: 10px 20px;
+}
+.margin-4 {
+    margin: 10px auto 50px;
+}
+.margin-5 {
+    margin: 10px 20px 40px auto;
+}
+
+/* geser nilai dibgian kanan saja yaitu dengan mergin-right: 20px; */

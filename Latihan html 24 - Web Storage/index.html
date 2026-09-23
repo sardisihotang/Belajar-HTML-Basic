@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Web Storage</title>
+
+    <style>
+        a {
+            color: inherit;
+        }
+        .dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Halo Sardianto Sihotang!</h1>
+
+    <a href="" onclick="gantiNama()">Ganti Nama</a>
+    <br><a href="" onclick="hapusNama()">Hapus Nama</a>
+    <br><a href="" class="toggle">Dark Mode</a>
+    <br><a href="" onclick="hapusStorage()">Hapus Storage</a>
+    <script>
+        const judul = document.querySelector('h1');
+        
+        let nama = localStorage.getItem('nama');
+        if (!nama) {
+            nama = prompt('Masukkan Nama Anda : ');
+            localStorage.setItem('nama', nama);
+        }
+        
+        judul.innerHTML = `Halo, ${nama} ^_^`;
+        
+        // Ganti Nama
+        const gantiNama = (e) => {
+            nama = prompt('Masukkan Nama Baru Anda : ');
+            localStorage.setItem('nama', nama);
+            e.preventDefault();
+        }
+
+         // Hapus Nama
+        const hapusNama = (e) => {
+            nama = prompt('Masukkan Nama Baru Anda : ');
+            localStorage.removeItem('nama');
+            e.preventDefault();
+        }
+
+        // Hapus Storage
+        const hapusStorage = (e) => {
+            nama = prompt('Masukkan Nama Baru Anda : ');
+            localStorage.clear();
+            e.preventDefault();
+        }
+
+        
+
+        // Toggle dark mode 
+        const toggle = document.querySelector('.toggle');
+        let tema = localStorage.getItem('tema');
+
+        if (!tema) {
+            localStorage.setItem('tema', 'light');
+        }
+        
+        const darkMode = () => {
+            document.body.classList.add('dark-mode');
+            toggle.innerHTML = 'Light Mode';
+            localStorage.setItem('tema', 'dark');
+        }
+
+        const lightMode = () => {
+            document.body.classList.remove('dark-mode');
+            toggle.innerHTML = 'Dark Mode';
+            localStorage.setItem('tema', 'light');
+        }
+
+        if(tema === 'dark') {
+            darkMode();
+        }
+
+        toggle.addEventListener('click', function(e) {
+            tema = localStorage.getItem('tema');
+
+            if (tema === 'light') {
+                darkMode();
+            } else {
+                lightMode();
+            }
+
+            e.preventDefault();
+        })
+    </script>
+</body>
+
+</html>

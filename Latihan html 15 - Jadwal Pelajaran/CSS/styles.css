@@ -1,0 +1,57 @@
+/* styles.css */
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #008cff;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color:brown
+}
+
+/* Underline styling for headings */
+u {
+    text-decoration: underline;
+}
+
+/* Horizontal rule styling */
+hr {
+    border: 1px solid #333;
+    margin: 20px 0;
+}
+
+/* List styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    color:aliceblue
+}
+
+/* List item styling */
+li {
+    margin: 5px 0;
+    padding-left: 20px;
+    position: relative;
+}
+/* Animasi sederhana */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Menggunakan animasi pada elemen */
+.animate-slide-in {
+    animation: slideInFromLeft 1s ease-in-out;
+}
